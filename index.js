@@ -9,6 +9,7 @@ function searchRepositories() {
 
     $.get(url).done(function(data) {
       console.log(data.items);
+      console.log(requests);
     const repoList = `<ul>${data.items
     .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>')
     .join('')}</ul>`;
