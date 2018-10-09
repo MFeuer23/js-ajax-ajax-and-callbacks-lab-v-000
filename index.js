@@ -3,7 +3,8 @@ $(document).ready(function (){
 
 function searchRepositories() {
   const input = document.getElementById("searchTerms").value
-  const url = `https://api.github.com/users/${input}/repos`
+  const url = `/https:api.github.com/search/repositories?q=${value}/`
+  
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
