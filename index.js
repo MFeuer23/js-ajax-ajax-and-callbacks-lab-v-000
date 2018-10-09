@@ -7,7 +7,7 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      console.log(data);
+      console.log(JSON.stringify(data));
       $(".results").append(JSON.stringify(data))
     }).fail(displayError())
   });
