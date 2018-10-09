@@ -11,7 +11,7 @@ function searchRepositories() {
       console.log(data.items);
 
     const repoList = `<ul>${data.items
-    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>' + `<a href="#" data-repo="${r.name}" data-user="${r.owner.login}" onclick="showCommits(this)">Show Commits</a>`)
+    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>' + `<a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a>`)
     .join('')}</ul>`;
     document.getElementById("results").innerHTML = repoList;
     }).fail(displayError())
@@ -25,8 +25,8 @@ function displayError() {
 }
 
 function showCommits(el) {
-  const repo = el.dataset.repo;
-  const user = el.dataset.user;
+  const repo = el.dataset.repository;
+  const user = el.dataset.owner;
   const url = `https://api.github.com/repos/${user}/${repo}/commits`
   $.get(url).done(function(data){
     const commitList = `<ul>${data
