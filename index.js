@@ -10,9 +10,10 @@ function searchRepositories() {
     const repoList = `<ul>${data
     .map(r => '<li>' + r.name + '</li>')
     .join('')}</ul>`;
+      $(".results").html(repoList);
     }).fail(displayError())
   });
-  $(".results").html(repoList);
+
 }
 
 
