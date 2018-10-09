@@ -25,7 +25,9 @@ function displayError() {
 }
 
 function showCommits(el) {
-  console.log(el.dataset.repo);
-  console.log(el.dataset.user);
+  const repo = el.dataset.repo;
+  const user = el.dataset.user;
+  const url = ``
+  
  
 }
