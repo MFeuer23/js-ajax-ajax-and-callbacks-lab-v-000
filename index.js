@@ -8,7 +8,7 @@ function searchRepositories() {
 
     $.get(url).done(function(data) {
       console.log(data);
-      $(".result").html(data);
+      $(".results").html(data);
     }).fail(displayError())
   });
 }
