@@ -12,6 +12,7 @@ function searchRepositories() {
     .join('')}</ul>`;
     }).fail(displayError())
   });
+  $(".results").html(repoList);
 }
 
 
