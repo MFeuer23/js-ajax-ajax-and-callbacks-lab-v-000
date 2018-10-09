@@ -29,10 +29,7 @@ function showCommits(el) {
   const user = el.dataset.user;
   const url = `https://api.github.com/repos/${user}/${repo}/commits`
   $.get(url).done(function(data){
-    const commitList = `<ul>${data
-    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>')
-    .join('')}</ul>`;
-    document.getElementById("details").innerHTML = commitList;
+    console.log(data);
   })
  
 }
