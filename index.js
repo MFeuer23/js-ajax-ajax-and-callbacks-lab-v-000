@@ -11,7 +11,7 @@ function searchRepositories() {
       console.log(data.items);
 
     const repoList = `<ul>${data.items
-    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>' + `<a href="#" data-repo="${r.commits_url}" onclick="showCommits(this)">Show Commits</a>`)
+    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>' + `<a href="#" data-repo="${r.name}" onclick="showCommits(this)">Show Commits</a>`)
     .join('')}</ul>`;
     document.getElementById("results").innerHTML = repoList;
     }).fail(displayError())
@@ -26,5 +26,5 @@ function displayError() {
 
 function showCommits(el) {
   const name = el.dataset.repo;
-  console.log(name)
+  const url = `https:api.github.com/repos/`
 }
