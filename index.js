@@ -24,6 +24,7 @@ function displayError() {
   document.getElementById("errors").innerHTML = "I'm sorry, there's been an error. Please try again.";
 }
 
-function showCommits() {
-  console.log(this)
+function showCommits(el) {
+  console.log(el)
+  console.log(el.dataset.repo)
 }
