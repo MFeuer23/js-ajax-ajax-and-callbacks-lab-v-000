@@ -8,8 +8,8 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      console.log(data);
-    const repoList = `<ul>${data
+      console.log(data.items);
+    const repoList = `<ul>${data.items
     .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>')
     .join('')}</ul>`;
     document.getElementById("results").innerHTML = repoList;
