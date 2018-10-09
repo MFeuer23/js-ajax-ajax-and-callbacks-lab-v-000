@@ -7,7 +7,7 @@ function searchRepositories() {
   
   $(document).ready(function (){
 
-    $.get(url).done(function(data) {
+    $.get(url)(function(data) {
       console.log(data.items);
       console.log(requests);
     const repoList = `<ul>${data.items
