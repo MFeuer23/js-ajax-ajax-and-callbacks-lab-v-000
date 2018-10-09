@@ -7,7 +7,7 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      const repoList = `<ul>${data
+    const repoList = `<ul>${data
     .map(r => '<li>' + r.name + '</li>')
     .join('')}</ul>`;
     }).fail(displayError())
