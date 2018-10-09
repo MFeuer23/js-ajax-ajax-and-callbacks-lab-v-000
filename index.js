@@ -12,7 +12,7 @@ function searchRepositories() {
     .map(r => '<li>' + r.name + '</li>')
     .join('')}</ul>`;
     console.log(repoList);
-      $(".results").append(repoList);
+      $("#results").append(repoList);
     }).fail(displayError())
   });
 
