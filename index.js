@@ -7,11 +7,9 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      console.log(data);
     const repoList = `<ul>${data
     .map(r => '<li>' + r.name + '</li>')
     .join('')}</ul>`;
-    console.log(repoList);
     document.getElementById("results").innerHTML = repoList;
     }).fail(displayError())
   });
