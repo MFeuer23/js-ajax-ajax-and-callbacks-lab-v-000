@@ -7,7 +7,7 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      data.map(repo => )
+      data.map(repo => '')
     }).fail(displayError())
   });
 }
