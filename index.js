@@ -28,6 +28,8 @@ function showCommits(el) {
   const repo = el.dataset.repo;
   const user = el.dataset.user;
   const url = `https://api.github.com/repos/${user}/${name}/commits`
-  
+  $.get(url).done(function(data){
+    console.log(data);
+  })
  
 }
