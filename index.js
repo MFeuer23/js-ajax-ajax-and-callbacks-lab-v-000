@@ -6,6 +6,7 @@ function searchRepositories() {
   const url = `https://api.github.com/users/${input}/repos`
   $.get(url).done(function(data) {
     console.log(data);
+    $(".result").html(data);
   }).fail(displayError())
 }
 
