@@ -7,7 +7,7 @@ function searchRepositories() {
   $(document).ready(function (){
 
     $.get(url).done(function(data) {
-      if(data)
+      if(data==="undefined"){displayError()}
     const repoList = `<ul>${data
     .map(r => '<li>' + r.name + '</li>')
     .join('')}</ul>`;
