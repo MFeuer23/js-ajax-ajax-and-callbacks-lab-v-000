@@ -26,5 +26,6 @@ function displayError() {
 
 function showCommits(el) {
   console.log(el.dataset.repo);
+  console.log(el.dataset.user);
  
 }
