@@ -26,5 +26,5 @@ function displayError() {
 
 function showCommits(el) {
   const name = el.dataset.repo;
-  const url = `https:api.github.com/repos/`
+  console.log(name)
 }
