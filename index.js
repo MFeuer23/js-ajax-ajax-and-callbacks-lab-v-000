@@ -15,7 +15,7 @@ function searchRepositories() {
     .join('')}</ul>`;
     document.getElementById("results").innerHTML = repoList;
     }).fail(displayError())
-  });
+
 
 }
 
