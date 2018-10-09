@@ -11,7 +11,7 @@ function searchRepositories() {
       console.log(data.items);
 
     const repoList = `<ul>${data.items
-    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>')
+    .map(r => '<li>' + r.name + ', ' + r.html_url + '</li>', '<a href="#" onclick="showCommits()">Shoe Commits</a>')
     .join('')}</ul>`;
     document.getElementById("results").innerHTML = repoList;
     }).fail(displayError())
