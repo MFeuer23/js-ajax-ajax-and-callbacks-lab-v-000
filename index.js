@@ -25,5 +25,5 @@ function displayError() {
 }
 
 function showCommits() {
-  
+  console.log(this)
 }
